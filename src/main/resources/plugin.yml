@@ -1,0 +1,96 @@
+name: ServerTools
+version: '${version}'
+main: com.servertools.ServerTools
+api-version: '26.2'
+description: Basic player and staff commands.
+
+commands:
+  gamemode:
+    description: Change a player's gamemode.
+    usage: /gamemode <type> [player]
+    aliases: [gm]
+  god:
+    description: Toggle god mode.
+    usage: /god [player]
+  openinv:
+    description: Open and edit a player's inventory.
+    usage: /openinv <player>
+    aliases: [invsee]
+  enderchest:
+    description: Open a player's ender chest.
+    usage: /enderchest [player]
+    aliases: [ec]
+  fix:
+    description: Repair the item in your hand.
+    usage: /fix
+    aliases: [repair]
+  tpa:
+    description: Send a teleport request to a player.
+    usage: /tpa <player>
+  tpaccept:
+    description: Accept a teleport request.
+    usage: /tpaccept
+  tpdeny:
+    description: Deny a teleport request.
+    usage: /tpdeny
+  trash:
+    description: Open a menu to throw away items.
+    usage: /trash
+    aliases: [disposal]
+
+permissions:
+  servertools.gamemode:
+    description: Allows /gamemode on yourself.
+    default: op
+  servertools.gamemode.others:
+    description: Allows /gamemode on other players.
+    default: op
+    children:
+      servertools.gamemode: true
+  servertools.god:
+    description: Allows /god on yourself.
+    default: op
+  servertools.god.others:
+    description: Allows /god on other players.
+    default: op
+    children:
+      servertools.god: true
+  servertools.openinv:
+    description: Allows /openinv.
+    default: op
+  servertools.enderchest:
+    description: Allows opening your own ender chest.
+    default: op
+  servertools.enderchest.others:
+    description: Allows opening other players' ender chests.
+    default: op
+    children:
+      servertools.enderchest: true
+  servertools.fix:
+    description: Allows /fix.
+    default: op
+  servertools.tpa:
+    description: Allows sending teleport requests.
+    default: true
+  servertools.tpaccept:
+    description: Allows accepting teleport requests.
+    default: true
+  servertools.tpdeny:
+    description: Allows denying teleport requests.
+    default: true
+  servertools.trash:
+    description: Allows /trash.
+    default: true
+  servertools.*:
+    description: Gives access to every command.
+    default: op
+    children:
+      servertools.gamemode.others: true
+      servertools.god.others: true
+      servertools.openinv: true
+      servertools.enderchest.others: true
+      servertools.fix: true
+      servertools.tpa: true
+      servertools.tpaccept: true
+      servertools.tpdeny: true
+      servertools.trash: true

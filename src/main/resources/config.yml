@@ -1,0 +1,45 @@
+# Color codes use '&' (for example &a, &c, &l).
+# Leave a message empty ("") to stop it from being sent.
+
+prefix: "&8[&bServerTools&8] &7"
+
+# Seconds before a /tpa request runs out.
+tpa-timeout: 60
+
+messages:
+  no-permission: "&cYou don't have permission to do that."
+  player-not-found: "&cCould not find a player named &f{player}&c."
+  players-only: "&cOnly players can use this command."
+  console-needs-player: "&cYou need to specify a player when running this from console."
+  usage: "&cUsage: &f{usage}"
+
+  gamemode-invalid: "&cUnknown gamemode &f{mode}&c. Use survival, creative, adventure or spectator."
+  gamemode-self: "Your gamemode has been set to &b{mode}&7."
+  gamemode-other: "Set &b{player}&7's gamemode to &b{mode}&7."
+  gamemode-target: "Your gamemode has been set to &b{mode}&7 by &b{sender}&7."
+
+  god-enabled: "God mode &aenabled&7."
+  god-disabled: "God mode &cdisabled&7."
+  god-enabled-other: "God mode &aenabled&7 for &b{player}&7."
+  god-disabled-other: "God mode &cdisabled&7 for &b{player}&7."
+
+  openinv-opened: "Opened &b{player}&7's inventory."
+
+  enderchest-opened-other: "Opened &b{player}&7's ender chest."
+
+  fix-no-item: "&cYou aren't holding anything."
+  fix-not-repairable: "&cThat item can't be repaired."
+  fix-already-full: "&cThat item is already at full durability."
+  fix-success: "Your item has been repaired."
+
+  tpa-self: "&cYou can't send a teleport request to yourself."
+  tpa-sent: "Teleport request sent to &b{player}&7."
+  tpa-received: "&b{player}&7 wants to teleport to you. Type &a/tpaccept&7 or &c/tpdeny&7."
+  tpa-expired: "Your teleport request to &b{player}&7 has expired."
+  tpa-no-request: "&cYou don't have any pending teleport requests."
+  tpa-accepted: "Teleport request from &b{player}&7 accepted."
+  tpa-accepted-requester: "&b{player}&7 accepted your teleport request."
+  tpa-denied: "Teleport request from &b{player}&7 denied."
+  tpa-denied-requester: "&b{player}&7 denied your teleport request."
+
+  trash-title: "&8Trash"
